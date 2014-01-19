@@ -1,0 +1,173 @@
+<template name="statistics">
+
+	<div id="statisticsSection" class="contentSection">
+
+		{{#with playersDatas}}
+			<h2>The players and their prejudices</h2>
+
+
+			<p>We need more votes to display more interesting and more reliable statistics. Come back in a few days (weeks) to see some results. But here's what we can say now :</p>
+
+			<p>We have {{totalVoters}} voters ; {{democratVoters}} ({{percentDem}}%) said they are democrats and {{republicanVoters}} ({{percentRep}}%) said they are republican.</p>
+
+			<p>They voted {{totalVotes}} times ({{votesPerPlayer}} times per player). Democrates voted {{demVotes}} times and republicans {{repVotes}} times.</p>
+
+			<p>The average score is {{averageScore}}% ; {{repRightVotes}}% for the republican players and {{demRightVotes}}% for the democrat players.</p>
+
+		{{/with}}
+
+		{{#with staticDatas}}
+		{{#constant}}
+			<h2>The congressmen
+
+				<div class="detailArea">
+					<button class="detailButton">+</button>
+					<article>There are {{totalCongressmen}} congressmen. {{totalDems}} ({{percentDems}}%) are democrats and {{totalReps}} ({{percentReps}}%) are republicans. {{totalFemale}} of them are women ({{PercentFemale}}%).</article>
+				</div>
+
+			</h2>
+
+			<div id="congressmenIcons">
+				<article class="inconContainer">
+					<h3>democrat congresmens</h3>
+
+					<div class="allCongressmanIcon">
+						{{#each demCongressMen}} <span class="{{this}} congressmanIcon"></span> {{/each}}
+					</div>
+
+					<div class="detailArea">
+						<button class="detailButton">+</button>
+						<article>
+							Among the democrats congressmen, there are :
+							<ul>
+								<li>{{totalDemWhite}} white representant ({{PercentDemWhite}}%)</li>
+								<li>{{totalDemHispanic}} hispanic representant ({{PercentDemHispanic}}%)</li>
+								<li>{{totalDemBlack}} black representant ({{PercentDemBlack}}%)</li>
+								<li>{{totalDemAsian}} asian representant ({{PercentDemAsian}}%)</li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="menVsWomen">
+						<article>
+							<div class="bigIconContainer"><span style="font-size: {{PercentDemMale}}%"></span></div>
+							<div class="wording">{{PercentDemMale}}% <span>{{totalDemMale}}</span></div>
+						</article>
+						<article>
+							<div class="bigIconContainer"><span style="font-size: {{PercentDemFemale}}%"></span></div>
+							<div class="wording">{{PercentDemFemale}}% <span>{{totalDemFemale}}</span></div>
+						</article>
+					</div>
+
+				</article>
+				<article class="inconContainer">
+					<h3>republican congresmens</h3>
+
+					<div class="allCongressmanIcon">
+						{{#each repCongressMen}} <span class="{{this}} congressmanIcon"></span> {{/each}}
+					</div>
+
+					<div class="detailArea">
+						<button class="detailButton">+</button>
+						<article>
+							Among the republican congressmen, there are :
+							<ul>
+								<li>{{totalRepWhite}} white representant ({{PercentRepWhite}}%)</li>
+								<li>{{totalRepHispanic}} hispanic representant ({{PercentRepHispanic}}%)</li>
+								<li>{{totalRepBlack}} black representant ({{PercentRepBlack}}%)</li>
+								<li>{{totalRepAsian}} asian representant ({{PercentRepAsian}}%)</li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="menVsWomen">
+						<article>
+							<div class="bigIconContainer"><span style="font-size: {{PercentRepMale}}%"></span></div>
+							<div class="wording">{{PercentRepMale}}% <span>{{totalRepMale}}</span></div>
+						</article>
+						<article>
+							<div class="bigIconContainer"><span style="font-size: {{PercentRepFemale}}%"></span></div>
+							<div class="wording">{{PercentRepFemale}}% <span>{{totalRepFemale}}</span></div>
+						</article>
+					</div>
+
+				</article>
+			</div>
+
+			<h2>Age repartition</h2>
+
+			<div id="agePyramidContainer">
+
+				<div id="agePyramid">
+
+					<div class="halfPyramid left">
+						{{#each demAgePyramid}}<span style="width: {{this}}rem"></span>{{/each}}
+					</div>
+
+					<div class="halfPyramid right">
+						{{#each repAgePyramid}}<span style="width: {{this}}rem"></span>{{/each}}
+					</div>
+
+					<h4>
+						democrats<span>({{demAverageAge}} average)</span>
+					</h4>
+					<h4>
+						republicans<span>({{repAverageAge}} average)</span>
+					</h4>
+
+				</div>
+
+			</div>
+
+			<h2>The ten best guessed representant</h2>
+
+			<div id="topTen" class="topcongressmen">
+				{{#each topTenCongressmen}}
+					<div class="congressman">
+						<img src="congressmenPictures/h{{ index }}.jpg">
+						<span class="percent">{{ rightVotesPercentRounded }}%</span>
+						<span class="party">{{ party }}</span>
+						<div class="detailArea">
+							<button class="detailButton">+</button>
+							<article>{{ name }} is a {{ party }} representant for {{ district }} and look {{ party }} for {{ rightVotesPercent }}% of the players.</article>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+
+			<h2>The ten worst guessed representant</h2>
+
+			<div id="worstTen" class="topcongressmen">
+				{{#each worstTenCongressmen}}
+					<div class="congressman">
+						<img src="congressmenPictures/h{{ index }}.jpg">
+						<span class="percent">{{ rightVotesPercentRounded }}%</span>
+						<span class="party">{{ party }}</span>
+						<div class="detailArea">
+							<button class="detailButton">+</button>
+							<article>{{ name }} is a {{ party }} representant for {{ district }} and look {{ party }} for {{ rightVotesPercent }}% of the players.</article>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+
+		{{/constant}}
+		{{/with}}
+
+		<h2>List of all the representants</h2>
+
+		{{#constant}}
+			<div id="representantList">
+
+				<button class="sort" data-sort="name"> name </button>
+				<button class="sort" data-sort="party"> party </button>
+				<button class="sort" data-sort="goodGuessPercent"> good guess </button>
+
+				<ul class="list"></ul>
+				<ul class="pagination"></ul>
+			</div>
+		{{/constant}}
+
+	</div>
+
+</template>

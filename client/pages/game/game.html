@@ -1,0 +1,66 @@
+<template name="game">
+
+	<div id="questionContainer">
+
+		{{#if onboardingMode}}
+
+			<p id="intro">To start, tell me which side you’d vote for.</p>
+
+		{{else}}
+
+			<div id="imageContainer">
+
+				<img src="congressmenPictures/h{{ congressman.index }}.jpg">
+
+				{{#unless questionMode}}<p id="name">{{ congressman.name }}</p>{{/unless}}
+
+			</div>
+
+			{{#unless questionMode}}
+
+				{{! <div id="details">
+					<button>+</button>
+					<p></p>
+				</div>}}
+
+			{{/unless}}
+
+		{{/if}}
+
+	</div>
+
+
+	{{#if questionMode}}
+
+		<div id="voteButtonsContainer">
+			<article><button class="voteButton" id="republican"><img src="img/republican.png" id="republican"></button></article>
+			<article><button class="voteButton" id="democrate"><img src="img/democrat.png" id="democrate"></button></article>
+		</div>
+
+	{{else}}
+
+		<div id="result">
+			<span>{{{ playerResult }}}</span>
+			<p>{{ congressman.name }} is a {{ congressman.party }} representant for {{ congressman.district }}</p>
+			<button id="goNext">next</button>
+		</div>
+
+		<div id="stats">
+
+			<div id="demResults">
+				<div class="barContainer"><div class="bar" style="height: {{demPercent}}%; top: {{repPercent}}%"></div></div>
+				<div class="votes">{{demVotes}} votes</div>
+				<div class="percent">{{demPercent}}%</div>
+			</div>
+
+			<div id="repResults">
+				<div class="barContainer"><div class="bar" style="height: {{repPercent}}%; top: {{demPercent}}%"></div></div>
+				<div class="votes">{{repVotes}} votes</div>
+				<div class="percent">{{repPercent}}%</div>
+			</div>
+
+		</div>
+
+	{{/if}}
+
+</template>

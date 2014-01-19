@@ -1,0 +1,947 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* **********
+	Generic imports
+********** */
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* **********
+	Fonts imports
+********** */
+@font-face {
+  font-family: 'rop';
+  src: url("../fonts/rop.eot");
+  src: url("../fonts/rop.eot?#iefix") format("embedded-opentype"), url("../fonts/rop.woff") format("woff"), url("../fonts/rop.ttf") format("truetype"), url("../fonts/rop.svg#rop") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* **********
+	Variables and mixins
+********** */
+/* **********
+	Responsive design breakpoints
+********** */
+/* **********
+	Generic styles
+********** */
+/* line 37, sass/main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 38, sass/main.scss */
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+/* line 39, sass/main.scss */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  background: #0073d2;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+/* line 40, sass/main.scss */
+input, button, select, option {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 42, sass/main.scss */
+div#fixedBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: #0073d2 url(../img/bg.png);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 5rem;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 5rem;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 0 5rem;
+}
+
+/* **********
+	Partials imports
+********** */
+/* **********
+	The main container and its header
+********** */
+/* line 4, sass/_uiElements.scss */
+div#mainContainer {
+  width: 95%;
+  max-width: 80rem;
+  margin: 2rem auto;
+  background: #0073d2;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5rem;
+  position: relative;
+}
+/* line 5, sass/_uiElements.scss */
+div#mainContainer header {
+  background: #fff;
+  color: #0073d2;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+/* line 6, sass/_uiElements.scss */
+div#mainContainer header h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 3.8rem;
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 700px) {
+  /* line 6, sass/_uiElements.scss */
+  div#mainContainer header h1 {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+  }
+}
+/* line 9, sass/_uiElements.scss */
+div#mainContainer header p {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+/* line 12, sass/_uiElements.scss */
+div#mainContainer footer {
+  background: #333;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+/* line 13, sass/_uiElements.scss */
+div#mainContainer footer span#scoreContainer {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 3rem;
+}
+
+/* line 20, sass/_uiElements.scss */
+div#bottomFooter {
+  background: #fff;
+  color: #0073d2;
+  position: relative;
+  width: 95%;
+  max-width: 80rem;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* line 22, sass/_uiElements.scss */
+a, button {
+  cursor: pointer;
+}
+/* line 23, sass/_uiElements.scss */
+a:focus, button:focus {
+  outline: none;
+}
+
+/* line 26, sass/_uiElements.scss */
+div.contentSection {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+/* line 27, sass/_uiElements.scss */
+div.contentSection h2 {
+  display: block;
+  margin: 4rem 0;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+}
+/* line 28, sass/_uiElements.scss */
+div.contentSection h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* line 29, sass/_uiElements.scss */
+div.contentSection p {
+  padding: 1rem 0;
+}
+/* line 30, sass/_uiElements.scss */
+div.contentSection p a {
+  color: #fff;
+}
+
+/* line 35, sass/_uiElements.scss */
+div.toolTip {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  width: 25rem;
+  color: #fff;
+  position: absolute;
+  display: none;
+  text-align: center;
+}
+
+/* **********
+	Styles for the main menu
+********** */
+/* line 4, sass/_menu.scss */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.8rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 0.8rem;
+  z-index: 999;
+  font-size: 0;
+  letter-spacing: -0.1rem;
+}
+/* line 5, sass/_menu.scss */
+nav a {
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 4rem;
+  display: inline-block;
+  height: 4rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+/* line 6, sass/_menu.scss */
+nav a:hover, nav a.active {
+  color: #fff;
+  background: #0073d2;
+}
+
+/* **********
+	The styles for the game section
+********** */
+/* line 4, sass/_gameSection.scss */
+section {
+  position: relative;
+}
+/* line 6, sass/_gameSection.scss */
+section div#questionContainer {
+  width: 20rem;
+  position: relative;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+/* line 7, sass/_gameSection.scss */
+section div#questionContainer p#intro {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+}
+@media only screen and (min-width: 700px) {
+  /* line 7, sass/_gameSection.scss */
+  section div#questionContainer p#intro {
+    padding: 3rem 0;
+  }
+}
+/* line 10, sass/_gameSection.scss */
+section div#questionContainer div#imageContainer {
+  width: 100%;
+  border: 1rem solid #333;
+  position: relative;
+}
+/* line 11, sass/_gameSection.scss */
+section div#questionContainer div#imageContainer img {
+  width: 100%;
+  display: block;
+}
+/* line 12, sass/_gameSection.scss */
+section div#questionContainer div#imageContainer p#name {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 1rem;
+}
+/* line 20, sass/_gameSection.scss */
+section div#voteButtonsContainer {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+@media only screen and (min-width: 700px) {
+  /* line 20, sass/_gameSection.scss */
+  section div#voteButtonsContainer {
+    padding: 0;
+  }
+}
+/* line 22, sass/_gameSection.scss */
+section div#voteButtonsContainer article {
+  display: inline-block;
+}
+/* line 23, sass/_gameSection.scss */
+section div#voteButtonsContainer article button.voteButton {
+  width: 7rem;
+  height: 7rem;
+  background: #fff;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  border-radius: 10rem;
+  border: none;
+  -webkit-box-shadow: #999999 0 0.4rem 0;
+  -moz-box-shadow: #999999 0 0.4rem 0;
+  box-shadow: #999999 0 0.4rem 0;
+  margin: 0 2rem;
+}
+/* line 24, sass/_gameSection.scss */
+section div#voteButtonsContainer article button.voteButton img {
+  width: 4rem;
+}
+/* line 25, sass/_gameSection.scss */
+section div#voteButtonsContainer article button.voteButton:hover {
+  -webkit-box-shadow: #999999 0 0.2rem 0;
+  -moz-box-shadow: #999999 0 0.2rem 0;
+  box-shadow: #999999 0 0.2rem 0;
+  -webkit-transform: translate(0, 0.2rem);
+  -moz-transform: translate(0, 0.2rem);
+  -ms-transform: translate(0, 0.2rem);
+  -o-transform: translate(0, 0.2rem);
+  transform: translate(0, 0.2rem);
+}
+@media only screen and (min-width: 700px) {
+  /* line 22, sass/_gameSection.scss */
+  section div#voteButtonsContainer article {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 33%;
+  }
+  /* line 28, sass/_gameSection.scss */
+  section div#voteButtonsContainer article:last-of-type {
+    left: auto;
+    right: 0;
+  }
+  /* line 29, sass/_gameSection.scss */
+  section div#voteButtonsContainer article:before {
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+  }
+  /* line 30, sass/_gameSection.scss */
+  section div#voteButtonsContainer article button {
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+/* line 35, sass/_gameSection.scss */
+section div#result {
+  width: 24rem;
+  position: relative;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 700px) {
+  /* line 35, sass/_gameSection.scss */
+  section div#result {
+    position: absolute;
+    top: 3rem;
+    width: 35%;
+    padding: 2rem 3rem;
+    right: 0;
+  }
+}
+/* line 37, sass/_gameSection.scss */
+section div#result span {
+  display: block;
+  width: 100%;
+  color: #0073d2;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 1rem;
+  background: #fff;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  vertical-align: middle;
+}
+/* line 38, sass/_gameSection.scss */
+section div#result p {
+  margin: 2rem 0;
+  text-align: center;
+}
+/* line 39, sass/_gameSection.scss */
+section div#result button {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border: none;
+  background: #b00;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 0.5rem 3rem;
+  font-weight: 400;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: #660000 0 0.4rem 0 0;
+  -moz-box-shadow: #660000 0 0.4rem 0 0;
+  box-shadow: #660000 0 0.4rem 0 0;
+}
+/* line 40, sass/_gameSection.scss */
+section div#result button:hover {
+  -webkit-box-shadow: #660000 0 0.2rem 0;
+  -moz-box-shadow: #660000 0 0.2rem 0;
+  box-shadow: #660000 0 0.2rem 0;
+  -webkit-transform: translate(0, 0.2rem);
+  -moz-transform: translate(0, 0.2rem);
+  -ms-transform: translate(0, 0.2rem);
+  -o-transform: translate(0, 0.2rem);
+  transform: translate(0, 0.2rem);
+}
+/* line 44, sass/_gameSection.scss */
+section div#stats {
+  position: relative;
+  width: 20rem;
+  margin: 3rem auto;
+  padding-left: 4.5rem;
+}
+@media only screen and (min-width: 700px) {
+  /* line 44, sass/_gameSection.scss */
+  section div#stats {
+    position: absolute;
+    top: 2rem;
+    width: 35%;
+    left: 0;
+    padding-left: 6rem;
+  }
+}
+/* line 46, sass/_gameSection.scss */
+section div#stats div#demResults, section div#stats div#repResults {
+  display: inline-block;
+  width: 7rem;
+  position: relative;
+}
+/* line 47, sass/_gameSection.scss */
+section div#stats div#demResults div.barContainer, section div#stats div#repResults div.barContainer {
+  height: 15rem;
+  width: 4rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 48, sass/_gameSection.scss */
+section div#stats div#demResults div.barContainer div.bar, section div#stats div#repResults div.barContainer div.bar {
+  width: 100%;
+  background: white url(../img/republican.png);
+  position: absolute;
+  background-size: 3rem;
+  background-repeat: repeat-y;
+  background-position: center bottom;
+}
+/* line 50, sass/_gameSection.scss */
+section div#stats div#demResults div.votes, section div#stats div#repResults div.votes {
+  position: absolute;
+  bottom: 7.7rem;
+  font-family: 'Verdana', sans-serif;
+  font-size: 1.1rem;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  right: -2.8rem;
+  text-align: left;
+  width: 10rem;
+}
+/* line 51, sass/_gameSection.scss */
+section div#stats div#demResults div.percent, section div#stats div#repResults div.percent {
+  font-size: 2.4rem;
+  margin-top: 0.5rem;
+}
+/* line 53, sass/_gameSection.scss */
+section div#stats div#demResults div.barContainer div.bar {
+  background: white url(../img/democrat.png);
+  background-size: 3rem;
+  background-repeat: repeat-y;
+  background-position: center bottom;
+}
+
+/* **********
+	The styles for the statistics section
+********** */
+/* line 7, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer {
+  width: 50%;
+  float: left;
+  padding: 2rem;
+}
+@media only screen and (max-width: 700px) {
+  /* line 7, sass/_statistics.scss */
+  div#statisticsSection div#congressmenIcons article.inconContainer {
+    width: 100%;
+    float: none;
+    padding: 2rem 0;
+  }
+}
+/* line 9, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer div.allCongressmanIcon {
+  margin-bottom: 2rem;
+}
+/* line 10, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer div.allCongressmanIcon span {
+  font-family: "rop";
+  font-size: 1.8rem;
+}
+/* line 11, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer div.allCongressmanIcon span.white {
+  color: #fff;
+}
+/* line 12, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer div.allCongressmanIcon span.black {
+  color: #684d27;
+}
+/* line 13, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer div.allCongressmanIcon span.hispanic {
+  color: #b26c49;
+}
+/* line 14, sass/_statistics.scss */
+div#statisticsSection div#congressmenIcons article.inconContainer div.allCongressmanIcon span.asian {
+  color: #c19846;
+}
+/* line 20, sass/_statistics.scss */
+div#statisticsSection div.menVsWomen {
+  margin-bottom: 2rem;
+  overflow: auto;
+}
+/* line 21, sass/_statistics.scss */
+div#statisticsSection div.menVsWomen article {
+  width: 50%;
+  float: left;
+}
+/* line 22, sass/_statistics.scss */
+div#statisticsSection div.menVsWomen article div.bigIconContainer {
+  font-size: 20rem;
+  font-family: "rop";
+  height: 20rem;
+}
+/* line 23, sass/_statistics.scss */
+div#statisticsSection div.menVsWomen article div.bigIconContainer span {
+  display: block;
+  text-align: center;
+  line-height: 20rem;
+}
+/* line 25, sass/_statistics.scss */
+div#statisticsSection div.menVsWomen article div.wording {
+  text-align: center;
+  font-size: 1.8rem;
+}
+/* line 26, sass/_statistics.scss */
+div#statisticsSection div.menVsWomen article div.wording span {
+  display: block;
+  font-size: 1.4rem;
+}
+/* line 31, sass/_statistics.scss */
+div#statisticsSection div.detailArea {
+  position: relative;
+  z-index: 50;
+  width: 4rem;
+  margin: 0 auto;
+  clear: both;
+}
+/* line 32, sass/_statistics.scss */
+div#statisticsSection div.detailArea button.detailButton {
+  display: block;
+  position: relative;
+  background: #fff;
+  color: #0073d2;
+  border: 0.5rem solid #ccc;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 0;
+  vertical-align: middle;
+  line-height: 0.5rem;
+}
+/* line 33, sass/_statistics.scss */
+div#statisticsSection div.detailArea article {
+  position: absolute;
+  background: #fff;
+  color: #0073d2;
+  padding: 2rem;
+  width: 30rem;
+  left: -13rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  display: none;
+  font-size: 1.4rem;
+  text-transform: none;
+}
+/* line 34, sass/_statistics.scss */
+div#statisticsSection div.detailArea article:before {
+  content: '';
+  display: block;
+  border: 0.8rem solid rgba(0, 0, 0, 0);
+  border-bottom-color: #fff;
+  position: absolute;
+  top: -1.6rem;
+  left: 50%;
+  margin-left: -0.8rem;
+}
+/* line 35, sass/_statistics.scss */
+div#statisticsSection div.detailArea article ul {
+  margin: 1rem 0;
+}
+/* line 36, sass/_statistics.scss */
+div#statisticsSection div.detailArea article ul li {
+  text-align: left;
+}
+/* line 37, sass/_statistics.scss */
+div#statisticsSection div.detailArea article ul li:before {
+  content: '• ';
+}
+/* line 41, sass/_statistics.scss */
+div#statisticsSection div.detailArea:hover article {
+  display: block;
+}
+/* line 45, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid {
+  text-align: center;
+}
+/* line 46, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid {
+  display: inline-block;
+  width: 40%;
+  position: relative;
+}
+/* line 47, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid span {
+  display: block;
+  background: #fff;
+  height: 0.2rem;
+  border-bottom: 0.1rem solid #0073d2;
+  -webkit-transform: scaleX(2);
+  -moz-transform: scaleX(2);
+  -ms-transform: scaleX(2);
+  -o-transform: scaleX(2);
+  transform: scaleX(2);
+  -webkit-transform-origin: center left;
+  -moz-transform-origin: center left;
+  -ms-transform-origin: center left;
+  -o-transform-origin: center left;
+}
+@media only screen and (max-width: 700px) {
+  /* line 47, sass/_statistics.scss */
+  div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid span {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+/* line 50, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid.left {
+  padding-right: 1rem;
+  border-right: 0.1rem solid #fff;
+  margin-right: 2rem;
+}
+/* line 51, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid.left span {
+  float: right;
+  clear: both;
+  -webkit-transform-origin: center right;
+  -moz-transform-origin: center right;
+  -ms-transform-origin: center right;
+  -o-transform-origin: center right;
+}
+/* line 52, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid.left:before {
+  display: block;
+  position: absolute;
+  content: '90';
+  top: 0;
+  right: -3.2rem;
+}
+/* line 53, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid.left:after {
+  display: block;
+  position: absolute;
+  content: '30';
+  bottom: 0;
+  right: -3.2rem;
+}
+/* line 55, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid div.halfPyramid.right {
+  padding-left: 1rem;
+  border-left: 0.1rem solid #fff;
+  margin-left: 2rem;
+}
+/* line 59, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid h4 {
+  clear: both;
+  text-align: right;
+  padding-right: 3rem;
+  display: inline-block;
+  width: 49%;
+}
+/* line 60, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid h4:last-of-type {
+  text-align: left;
+  padding-left: 3rem;
+  padding-right: 0;
+}
+/* line 61, sass/_statistics.scss */
+div#statisticsSection div#agePyramidContainer div#agePyramid h4 span {
+  font-family: 'verdana', sans serif;
+  font-size: 1.1rem;
+  display: block;
+}
+/* line 66, sass/_statistics.scss */
+div#statisticsSection div.topcongressmen {
+  text-align: center;
+}
+/* line 67, sass/_statistics.scss */
+div#statisticsSection div.topcongressmen div.congressman {
+  display: inline-block;
+  width: 29%;
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 700px) {
+  /* line 67, sass/_statistics.scss */
+  div#statisticsSection div.topcongressmen div.congressman {
+    width: 40%;
+    min-width: 15rem;
+  }
+}
+/* line 69, sass/_statistics.scss */
+div#statisticsSection div.topcongressmen div.congressman img {
+  display: block;
+  width: 100%;
+}
+/* line 70, sass/_statistics.scss */
+div#statisticsSection div.topcongressmen div.congressman span.percent {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1.5rem;
+  text-align: right;
+  font-size: 5rem;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 0 0.3rem;
+}
+/* line 71, sass/_statistics.scss */
+div#statisticsSection div.topcongressmen div.congressman span.party {
+  position: absolute;
+  top: 1.3rem;
+  left: 1.5rem;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 0 0.3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 72, sass/_statistics.scss */
+div#statisticsSection div.topcongressmen div.congressman div.detailArea {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  margin-left: -2rem;
+}
+/* line 76, sass/_statistics.scss */
+div#statisticsSection div#representantList {
+  font-size: 0;
+  letter-spacing: -0.1rem;
+}
+/* line 77, sass/_statistics.scss */
+div#statisticsSection div#representantList button, div#statisticsSection div#representantList ul {
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+/* line 78, sass/_statistics.scss */
+div#statisticsSection div#representantList button {
+  display: inline-block;
+  width: 33%;
+  border: none;
+  background: #fff;
+  color: #0073d2;
+  text-align: left;
+  padding: 0.7rem 1.2rem;
+  border-right: 0.1rem solid #0073d2;
+}
+/* line 79, sass/_statistics.scss */
+div#statisticsSection div#representantList button:last-of-type {
+  width: 34%;
+}
+/* line 80, sass/_statistics.scss */
+div#statisticsSection div#representantList button:before {
+  font-family: "rop";
+  content: '';
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+/* line 81, sass/_statistics.scss */
+div#statisticsSection div#representantList button.asc:before {
+  content: '';
+}
+/* line 82, sass/_statistics.scss */
+div#statisticsSection div#representantList button.desc:before {
+  content: '';
+}
+/* line 86, sass/_statistics.scss */
+div#statisticsSection div#representantList ul.list li:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 87, sass/_statistics.scss */
+div#statisticsSection div#representantList ul.list li span {
+  display: inline-block;
+  width: 33%;
+  padding: 0.5rem 1.2rem;
+  vertical-align: top;
+}
+/* line 90, sass/_statistics.scss */
+div#statisticsSection div#representantList ul.pagination {
+  text-align: center;
+  margin: 2rem 0;
+}
+/* line 91, sass/_statistics.scss */
+div#statisticsSection div#representantList ul.pagination li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+/* line 92, sass/_statistics.scss */
+div#statisticsSection div#representantList ul.pagination li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #0073d2;
+}
+/* line 94, sass/_statistics.scss */
+div#statisticsSection div#representantList ul.pagination li.active a {
+  background: none;
+  color: #fff;
+}
+@media only screen and (max-width: 700px) {
+  /* line 99, sass/_statistics.scss */
+  div#statisticsSection div#representantList button, div#statisticsSection div#representantList ul.list li span {
+    display: block;
+    width: 100%;
+  }
+  /* line 100, sass/_statistics.scss */
+  div#statisticsSection div#representantList button {
+    border: none;
+    border-bottom: 0.1rem solid #0073d2;
+  }
+  /* line 101, sass/_statistics.scss */
+  div#statisticsSection div#representantList button:last-of-type {
+    width: 100%;
+  }
+  /* line 103, sass/_statistics.scss */
+  div#statisticsSection div#representantList ul.list li {
+    padding: 0.7rem 1.2rem;
+  }
+  /* line 104, sass/_statistics.scss */
+  div#statisticsSection div#representantList ul.list li span {
+    padding: 0;
+  }
+}

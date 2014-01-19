@@ -1,0 +1,108 @@
+/* **********
+	The styles for the statistics section
+********** */
+div#statisticsSection{
+
+	div#congressmenIcons{
+		article.inconContainer{width: 50%; float: left; padding: 2rem;
+			@media #{$mobile}{width: 100%; float: none; padding: 2rem 0;}
+			div.allCongressmanIcon{margin-bottom: 2rem;
+				span{font-family: "rop"; font-size: 1.8rem;
+					&.white{color: #fff;}
+					&.black{color: #684d27;}
+					&.hispanic{color: #b26c49;}
+					&.asian{color: #c19846;}
+				}
+			}
+		}
+	}
+
+	div.menVsWomen{margin-bottom: 2rem; overflow: auto;
+		article{width: 50%; float: left;
+			div.bigIconContainer{font-size: 20rem; font-family: "rop"; height: 20rem;
+				span{display: block; text-align: center; line-height: 20rem;}
+			}
+			div.wording{text-align: center; font-size: 1.8rem;
+				span{display: block; font-size: 1.4rem;}
+			}
+		}
+	}
+
+	div.detailArea{position: relative; z-index: 50; width: 4rem; margin: 0 auto; clear: both;
+		button.detailButton{display: block; position: relative; background: #fff; color: $bleu; border: 0.5rem solid #ccc; @include border-radius(100%); width: 4rem; height: 4rem; font-weight: 700; font-size: 3rem; padding: 0; vertical-align: middle; line-height: 0.5rem;}
+		article{position: absolute; background: #fff; color: $bleu; padding: 2rem; width: 30rem; left: -13rem; @include border-radius(0.5rem); @include box-shadow(rgba(0,0,0,0.5) 0 0 0.5rem); margin-top: 0.5rem; text-align: center; display: none; font-size: 1.4rem; text-transform: none;
+			&:before{content: ''; display: block; border: 0.8rem solid rgba(0,0,0,0); border-bottom-color: #fff; position: absolute; top: -1.6rem; left: 50%; margin-left: -0.8rem;}
+			ul{margin: 1rem 0;
+				li{text-align: left;
+					&:before{content: '• ';}
+				}
+			}
+		}
+		&:hover{article{display: block;}}
+	}
+
+	div#agePyramidContainer{
+		div#agePyramid{text-align: center;
+			div.halfPyramid{display: inline-block; width: 40%; position: relative;
+				span{display: block; background: #fff; height: 0.2rem; border-bottom: 0.1rem solid $bleu; @include scaleX(2); -webkit-transform-origin: center left; -moz-transform-origin: center left; -ms-transform-origin: center left; -o-transform-origin: center left;
+					@media #{$mobile}{@include scaleX(1);}
+				}
+				&.left{padding-right: 1rem; border-right: 0.1rem solid #fff; margin-right: 2rem;
+					span{float: right; clear: both; -webkit-transform-origin: center right; -moz-transform-origin: center right; -ms-transform-origin: center right; -o-transform-origin: center right;}
+					&:before{display: block; position: absolute; content: '90'; top: 0; right: -3.2rem;}
+					&:after{display: block; position: absolute; content: '30'; bottom: 0; right: -3.2rem;}
+				}
+				&.right{padding-left: 1rem; border-left: 0.1rem solid #fff; margin-left: 2rem;
+					span{}
+				}
+			}
+			h4{clear: both; text-align: right; padding-right: 3rem; display: inline-block; width: 49%;
+				&:last-of-type{text-align: left; padding-left: 3rem; padding-right: 0;}
+				span{font-family: 'verdana', sans serif; font-size: 1.1rem; display: block;}
+			}
+		}
+	}
+
+	div.topcongressmen{text-align: center;
+		div.congressman{display: inline-block; width: 29%; background: #fff; padding: 1rem; margin: 1rem; position: relative; margin-bottom: 2rem;
+			@media #{$mobile}{width: 40%; min-width: 15rem;}
+			img{display: block; width: 100%;}
+			span.percent{position: absolute; bottom: 0.5rem; right: 1.5rem; text-align: right; font-size: 5rem; @include text-shadow(rgba(0,0,0,0.3) 0 0 0.3rem);}
+			span.party{position: absolute; top: 1.3rem; left: 1.5rem; @include text-shadow(rgba(0,0,0,0.3) 0 0 0.3rem); color: rgba(255,255,255,0.5);}
+			div.detailArea{position: absolute; bottom: -2.5rem; left: 50%; margin-left: -2rem;}
+		}
+	}
+
+	div#representantList{font-size: 0; letter-spacing: -0.1rem;
+		button, ul {font-size: 1.4rem; letter-spacing: 0;}
+		button{display: inline-block; width: 33%; border: none; background: #fff; color: $bleu; text-align: left; padding: 0.7rem 1.2rem; border-right: 0.1rem solid $bleu;
+			&:last-of-type{width: 34%;}
+			&:before{font-family: "rop"; content: ''; display: inline-block; margin-right: 0.5rem;}
+			&.asc:before{content: '';}
+			&.desc:before{content: '';}
+		}
+		ul.list{
+			li{
+				&:nth-child(odd){background: rgba(255,255,255,0.1);}
+				span{display: inline-block; width: 33%; padding: 0.5rem 1.2rem; vertical-align: top;}
+			}
+		}
+		ul.pagination{text-align: center; margin: 2rem 0;
+			li{display: inline-block; margin: 0 0.5rem;
+				a{text-decoration: none; display: inline-block; padding: 0.5rem 1rem; background: #fff; color: $bleu;}
+				&.active{
+					a{background: none; color: #fff;}
+				}
+			}
+		}
+		@media #{$mobile}{
+			button, ul.list li span{display: block; width: 100%;}
+			button{border: none; border-bottom: 0.1rem solid $bleu;
+				&:last-of-type{width: 100%;}
+			}
+			ul.list li{padding: 0.7rem 1.2rem;
+				span{padding: 0;}
+			}
+		}
+	}
+}

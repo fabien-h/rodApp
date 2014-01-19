@@ -1,0 +1,67 @@
+<head>
+	<title>Republican or Democrat</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+	<div id="globalPreloader" style="display: none;">Some static content goes here</div>
+
+	<div id="fixedBg"></div>
+
+	{{renderRouter}}
+</body>
+
+<template name="layout">
+
+	{{yield "menu"}}
+
+	<div id="mainContainer">
+		<header>
+			<h1>Republican or Democrat</h1>
+			<p>Will you guess the political orientation of the congressmen just by their face ?</p>
+		</header>
+
+		<section>
+			{{yield}}
+		</section>
+
+		<footer>
+			<span id="scoreContainer">
+				your score : {{rightCount}} / {{totalCount}} &nbsp; &nbsp; {{percentRight}}%
+			</span>
+			<span id="tweetbutton">
+				{{#constant}}
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Republican or democrat, will you guess ?" data-url="http://republicanordemocrat.meteor.com/" data-via="wax_o" data-hashtags="republicanordemocrat"></a>
+				{{/constant}}
+			</span>
+			<span id="facebookButton">
+				{{#constant}}
+					<div class="fb-share-button" data-href="http://republicanordemocrat.meteor.com/" data-type="button_count"></div>
+				{{/constant}}
+			</span>
+			<span id="googleButton">
+				{{#constant}}
+					<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://republicanordemocrat.meteor.com/"></div>
+				{{/constant}}
+			</span>
+		</footer>
+	</div>
+
+	<div id="bottomFooter">
+		Will you do better than the average score of {{averageScore}}% obtained by our {{totalVoters}} voters?
+	</div>
+
+	{{yield "includesFooter"}}
+
+</template>
+
+
+<template name="loading">
+	loading
+</template>
+
+<template name="notFound">
+	404 youpi
+</template>
+
+<template name="includesFooter"><!-- empty template to include javascripts --></template>

@@ -1,0 +1,35 @@
+/* **********
+	The main container and its header
+********** */
+div#mainContainer{width: 95%; max-width: 80rem; margin: 2rem auto; background: $bleu; @include box-shadow(rgba(0,0,0,0.5) 0 0 0.5rem); position: relative;
+	header{background: #fff; color: $bleu; text-align: center; padding: 4rem 1rem;
+		h1{text-transform: uppercase; font-size: 4rem; font-weight: 700; line-height: 3.8rem; margin-bottom: 1.5rem;
+			@media #{$mobile}{font-size: 3.6rem; line-height: 3.6rem;}
+		}
+		p{display: block; position: relative; margin: 0 auto; max-width: 40rem;}
+	}
+	section{}
+	footer{background: #333; padding: 1rem 2rem; text-align: center;
+		span#scoreContainer{display: inline-block; text-transform: uppercase; margin-right: 3rem;}
+		span#tweetbutton{}
+		span#facebookButton{}
+		span#googleButton{}
+	}
+}
+
+div#bottomFooter{background: #fff; color: $bleu; position: relative; width: 95%; max-width: 80rem; margin: 2rem auto; text-align: center; padding: 2rem;}
+
+a, button{cursor: pointer;
+	&:focus{outline: none;}
+}
+
+div.contentSection{position: relative; padding: 2rem; width: 100%; max-width: 60rem; margin: 0 auto;
+	h2{display: block; margin: 4rem 0; text-transform: uppercase; font-size: 3rem; text-align: center;}
+	h3{text-transform: uppercase; font-size: 2rem; text-align: center; margin-bottom: 1rem;}
+	p{padding: 1rem 0;
+		a{color: #fff;}
+	}
+}
+
+//the tooltips
+div.toolTip{background: rgba(0,0,0,0.5); padding: 0.5rem 1rem; width: 25rem; color: #fff; position: absolute; display: none; text-align: center;}
